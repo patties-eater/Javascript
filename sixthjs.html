@@ -1,0 +1,47 @@
+<!--form validation in javascript  -->
+<html>
+  <head> <title> fofrm validation in js</title></head>
+
+<body>
+   <form action="" onsubmit="return Data()">
+    user Id: <input type="text" name="" id="n1"><br>
+    contact: <input type="text" name="" id="n2"> <br>
+    password: <input type="password" name=""  id="n3"><br>
+    comform password: <input type="password" id="n4"><br>
+    <input type="submit" value="submit your data">
+   </form>
+</body>
+<script>
+  function Data() {
+  var a = document.getElementById("n1").value;
+  var b = document.getElementById("n2").value;
+  var c = document.getElementById("n3").value;
+  var d = document.getElementById("n4").value;
+
+  if(a=="" || b=="" || c=="" || d=="")
+{
+alert("all fields are mandatory to be filled");
+return false;
+
+
+}
+else if (b.length !=10){
+  alert("contact number should be exactly 10 digits");
+
+}
+else if (isNaN(b)) {
+  alert("Only number are allowed in the contact field");
+  return false;
+}
+else if(c !=d) {
+ alert("password do not match. plese reEnter the same password");
+ return false;
+}
+else {
+  return true;
+  //  Allows form submition
+}
+}
+</script>
+
+</html>
