@@ -1,0 +1,29 @@
+<!--  write a Program to cheque whether a input num is odd || even  -->
+
+<html>
+  <head> <title> add || even</title></head>
+ <body>
+  <form action="">
+    <input type="number" id="num1">
+  
+    <button onclick="mero()">submit</button>
+    
+  </form>
+  <script>
+    function mero(){
+      var n = document.getElementById("num1").value;
+      var result;
+      if(n%2==0)
+    {
+      result = n+ "is even";
+    }
+    else{
+      result = n+ "is odd";
+
+    }
+    document.write(result);
+    }
+    
+  </script>
+ </body>
+</html>
